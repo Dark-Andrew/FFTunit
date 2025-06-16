@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Fantasy Tactics Unit Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <div class="sidebar">
+        <h3 class="sidebar-title">Saved Characters (<span id="characterCount">0</span>/5)</h3>
+        <div id="savedCharactersList" class="saved-characters-list">
+        </div>
+        <div class="sidebar-buttons">
+            <button id="copyAllBtn" class="sidebar-btn" disabled>Copy All</button>
+            <button id="clearAllBtn" class="sidebar-btn" disabled>Clear All</button>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="main-card">
+            <h1 class="main-title">Final Fantasy Tactics Unit Generator</h1>
+            
+            <div class="generator-section">
+                <div class="button-container">
+                    <button id="generateUnitBtn" class="generate-btn">
+                        Generate Random Unit
+                    </button>
+                </div>
+
+                <div id="unitResult" class="unit-result hidden">
+                    <h2 class="unit-name">
+                        <span id="unitNameText">Unit Name</span>
+                    </h2>
+                    
+                    <div class="unit-details">
+                        <div class="detail-column">
+                            <div class="detail-row">
+                                <span class="detail-label">Gender:</span>
+                                <span id="unitGender" class="detail-value gender-value">Male</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Job:</span>
+                                <span id="unitJob" class="detail-value job-value">Knight</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Zodiac:</span>
+                                <span id="unitZodiac" class="detail-value zodiac-value">Aries</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-column">
+                            <div class="detail-row">
+                                <span class="detail-label">Right Hand:</span>
+                                <span id="unitRightHand" class="detail-value weapon-value">Sword</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Left Hand:</span>
+                                <span id="unitLeftHand" class="detail-value weapon-value">Shield</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Armor:</span>
+                                <span id="unitArmor" class="detail-value armor-value">Plate Mail</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Accessory:</span>
+                                <span id="unitAccessory" class="detail-value accessory-value">Ring</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="abilities-section">
+                        <h3 class="abilities-title">Learned Abilities:</h3>
+                        <div id="abilitiesList" class="abilities-list">
+                        </div>
+                    </div>
+                    
+                    <div class="save-character-section">
+                        <button id="saveCharacterBtn" class="save-character-btn">
+                            Save Character
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="name-generator-section">
+                <h2 class="name-generator-title">Name Generator</h2>
+                
+                <div class="name-generator-content">
+                    <div style="display: flex; gap: 1rem;">
+                        <button id="generateMaleNameBtn" class="generate-name-btn">
+                            Generate Male Name
+                        </button>
+                        <button id="generateFemaleNameBtn" class="generate-name-btn">
+                            Generate Female Name
+                        </button>
+                    </div>
+                    
+                    <div id="nameResult" class="name-result hidden">
+                        <span id="generatedName">Character Name</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="gameData.js"></script>
+    <script src="generator.js"></script>
+    <script src="display.js"></script>
+</body>
+</html>
